@@ -1,0 +1,153 @@
+
+
+@import url(reset.css);
+
+
+
+
+
+
+[class*="__container"]{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+.header__title{
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.4;
+	font-size: 33px;
+	padding: 20px 0;
+}
+@media (max-width: 500px) {
+	.header__title{
+		font-size: 25px;
+	}
+}
+
+main{
+	padding-bottom: 20px;
+}
+.main__body{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+	.main__body{
+		flex-direction: column;
+	}
+}
+
+.main__content{
+	border: 1px solid #000;
+	width: 200px;
+	height: 200px;
+	flex: 0 0 200px;
+	background-color: rgba(0, 0, 0, 0.143);
+}
+
+.main__text{
+	flex:  1 1 auto;
+}
+.main__text p{
+	font-size: 18px;
+	line-height: 1.2;
+}
+.main__content > div{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	font-size: 22px;
+	color: #fff;
+	transition: all 300ms;
+}
+
+.main__translete{
+	background-color: green;
+}
+
+.main__translete:hover{
+	transform: translate(20px, 10px);
+	transition: all 300ms;
+}
+
+
+
+.main__rotate{
+	background-color: rgb(0, 75, 128);
+}
+
+.main__rotate:hover{
+	transform: rotate(45deg);
+	transition: all 300ms;
+}
+
+.main__sceale{
+	background-color: rgb(73, 0, 128);
+}
+
+.main__sceale:hover{
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+.main__mani{
+	background-color: rgb(126, 0, 128);
+}
+
+.main__mani:hover{
+	transform: translate(20px, -20px) rotate(90deg) scale(1.2);
+	transition: all 300ms;
+	border-radius: 50%;
+}
+
+.main__origin{
+	background-color: rgb(0, 75, 128);
+	transform-origin: 0 0;
+}
+
+
+.main__origin:hover{
+	transform: rotate(-45deg);
+	transition: all 300ms;
+}
+
+.main__skiwe{
+	background-color: rgb(47, 201, 52);
+}
+
+
+.main__skiwe:hover{
+	transform: skew(20deg, 40deg);
+	transition: all 300ms;
+}
+
+
+
+
+.main__body{
+	perspective: 700px;
+	transform-origin: center;
+
+}
+
+.main__perspective{
+
+	background-color: rgb(126, 128, 0);
+
+}
+
+
+.main__perspective:hover{
+	transform: rotateX(50deg);
+	transition: all 300ms;
+	
+}

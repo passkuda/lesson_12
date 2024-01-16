@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>lesson 11</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header__container">
+			<h1 class="header__title">2dТрансформации</h1>
+		</div>
+	</header>
+	<main class="main">
+		<div class="main__container">
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__translete">transform: translate(20px 10px);</div>
+				</div>
+				<div class="main__text">
+					<p>
+						сдвиг блока на указанное растояние по горизонтали и вертикали в пикселях или емах ремах не влияет на окружение
+						(можно использовать отрицательные величины)
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__rotate">transform: rotate(45deg);</div>
+				</div>
+				<div class="main__text">
+					<p>
+						сдвиг блока на указаный угол (можно использовать отрицательные величины) 
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__sceale">transform: scale(1.2);</div>
+				</div>
+				<div class="main__text">
+					<p>
+						маштабирование блока на указаные величины (можно использовать отрицательные величины) 
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__mani">transform: scale(1.2);</div>
+				</div>
+				<div class="main__text">
+					<p>
+						Одновременно применение несколькох значений к трпнсформации. Для етого было придумана  такая фишка как ТРАНСФОРМ МАТРИКС 2D но она слишком сложная  <br>
+						и потому мною было принято решение забыть о ней на всегда и использовать более адыкватный способ  применения множественных трансформаций на обект
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__origin">transform-origin: 0 0;</div>
+				</div>
+				<div class="main__text">
+					<p>
+						Перенос точки расчета изменения (2dТрансформации) обекта   transform-origin - задается РОДИТЕЛЬСКОМУ блоку
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__skiwe">transform: skew(20deg, 40deg);</div>
+				</div>
+				<div class="main__text">
+					<p>
+						Деформация блока на указаные градусы (deg)
+					</p>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="main__content">
+					<div class="main__perspective">НЕ фурычит</div>
+				</div>
+				<div class="main__text">
+					<p>
+						Perspective <br>
+						perspective-origin
+						Встановлення глибини та зміна 
+						точки початку координат.
+						!! Задаються батьківському елементу!
+						perspective-origin: center (за замевченням)
+						perspective - не можна вказати у відсотках
+						Кароче что то не хочет работать у меня перспектива
+						потом как то разберусь
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
