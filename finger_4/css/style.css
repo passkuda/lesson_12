@@ -1,0 +1,37 @@
+@import url(reset.css);
+
+
+
+[class*="__container"]{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header__title{
+	text-align: center;
+	font-weight: 700;
+	font-size: 23px;
+	padding: 20px 0;
+	text-transform: uppercase;
+	line-height: 1.5;
+}
+
+.main__title{
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	padding: 20px 0;
+	line-height: 1.5;
+}
+.main__text{
+	padding: 10px 0;
+}
+.main__text > p:not(:last-child){
+	margin-bottom: 20px;
+}
+
+.main__text p{
+	font-size: 18px;
+	line-height: 1.5;
+}
