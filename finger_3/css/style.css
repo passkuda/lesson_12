@@ -1,0 +1,88 @@
+@import url(reset.css);
+
+[class*="__container"]{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+header{
+	margin-bottom: 100px;
+	padding: 20px 0;
+}
+
+
+.header__title{
+	text-align: center;
+	font-weight: 700;
+	font-size: 33px;
+	color: #fff;
+}
+
+body{
+	background: url(../img/02.jpg) center / contain repeat;
+	padding: 10px;
+}
+
+/* ---------------------------------------------------------------------------- */
+
+
+
+
+.car__body{
+	margin: 0 auto;
+	width: 500px;
+	height: 250px;
+	background-color: blue;
+	border-radius: 300px 100px 50px 10px;
+	position: relative;
+	z-index: 20;
+	border: 3px solid #000;
+}
+
+.car__body::before{
+	content: "";
+	display: block;
+	width: 320px;
+	height: 75px;
+	background: url(../img/01.jpg) -190px -75px / 220% no-repeat;
+	position: absolute;
+	border-radius: 100px 30px 0 0;
+	top: 40px;
+	left: 110px;
+	z-index: 1;
+}
+
+
+.car__spoiler{
+	display: block;
+	width: 100px;
+	height: 50px;
+	background-color: blue;
+	position: absolute;
+	right: 0;
+	top: -20px;
+	transform: rotate(-25deg);
+	border-radius: 0 100px 0 0;
+}
+
+
+
+.flie{
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	bottom: 50px;
+	right: 70px;
+	perspective: 200px;
+}
+
+.flie__content{
+	border: 2px solid #000;
+	transform-origin: left center;
+	width: 100px;
+	height: 200px;
+	background-color: blue;
+	transform: rotateX(50deg);
+	border-radius:  0 0px 0px 20px;
+}
