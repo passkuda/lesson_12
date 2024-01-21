@@ -1,0 +1,62 @@
+@import url(reset.css);
+
+[class*="__container"]{
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header__title{
+	text-align: center;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.2;
+	margin-bottom: 100px;
+}
+
+.main__container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main__translete,
+.main__rotate,
+.main__skeil,
+.main__skwe,
+.main__multi{
+	width: 150px;
+	height: 150px;
+	background-color: palegreen;
+	transition: all 300ms;
+	margin-bottom: 100px;
+}
+
+.main__translete:hover{
+	transform: translate(50px, 30px);
+	transition: all 300ms;
+}
+
+
+.main__rotate:hover{
+	transform: rotate(180deg);
+	transition: all 300ms;
+}
+
+.main__skeil:hover{
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+.main__skwe:hover{
+	transform: skewX(30deg);
+	transition: all 300ms;
+}
+
+
+.main__multi:hover{
+	transform: translate(20px, 20px) skewX(20deg) rotate(45deg) scale(0.7);
+	transition: all 300ms;
+}
+
+
