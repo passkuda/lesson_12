@@ -3190,6 +3190,18 @@
     window.addEventListener("load", (() => {
         document.getElementById("preloader").classList.add("preloader-hidden");
     }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const items = document.querySelectorAll(".advantages__item");
+        function handleScroll() {
+            items.forEach((item => {
+                const rect = item.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                if (rect.top < windowHeight - 50) item.classList.add("visible"); else item.classList.remove("visible");
+            }));
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
