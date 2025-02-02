@@ -3191,16 +3191,22 @@
         document.getElementById("preloader").classList.add("preloader-hidden");
     }));
     document.addEventListener("DOMContentLoaded", (function() {
-        const items = document.querySelectorAll(".advantages__item");
+        const items = document.querySelectorAll("[data-animate]");
         function handleScroll() {
             items.forEach((item => {
                 const rect = item.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
-                if (rect.top < windowHeight - 50) item.classList.add("visible"); else item.classList.remove("visible");
+                if (rect.top < windowHeight - 50) item.classList.add(item.getAttribute("data-animate")); else item.classList.remove(item.getAttribute("data-animate"));
             }));
         }
         window.addEventListener("scroll", handleScroll);
         handleScroll();
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        document.querySelectorAll(".review__rating").forEach((rating => {
+            const stars = parseInt(rating.dataset.rating, 10);
+            rating.innerHTML = `<span>${"⭐".repeat(stars)}</span>`;
+        }));
     }));
     window["FLS"] = true;
     isWebp();
