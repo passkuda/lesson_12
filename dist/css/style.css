@@ -963,28 +963,114 @@ main {
   font-size: 1rem;
 }
 
-.review__rating span {
-  font-size: 18px;
+.faq {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f9f9f9;
 }
 
-.review__rating[data-rating="1"] span {
-  color: red;
+.faq__title {
+  font-size: 2.375rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3.125rem;
+  line-height: 1.5;
 }
 
-.review__rating[data-rating="2"] span {
-  color: orange;
+.faq__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
 }
 
-.review__rating[data-rating="3"] span {
-  color: yellowgreen;
+.faq__item {
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+      -ms-transform: translateY(25px);
+          transform: translateY(25px);
+  -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
-.review__rating[data-rating="4"] span {
-  color: gold;
+.faq__question {
+  width: 100%;
+  padding: 0.9375rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-.review__rating[data-rating="5"] span {
-  color: yellow;
+.faq__icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid green;
+  border-bottom: 3px solid green;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out, padding 0.3s;
+  transition: max-height 0.3s ease-out, padding 0.3s;
+  padding: 0 15px;
+  line-height: 1.5;
+  color: #000;
+  background-color: rgb(65, 223, 65);
+  padding: 0.3125rem;
+}
+
+.faq__answer p:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 12.5rem;
+  padding: 0.9375rem;
+}
+
+.faq__item.active .faq__icon {
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.faq__item.scale-up {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .swiper {
@@ -1171,6 +1257,22 @@ main {
   .review-form__file {
     font-size: 1rem;
   }
+
+  .faq {
+    padding-top: 5rem;
+  }
+
+  .faq {
+    padding-bottom: 5rem;
+  }
+
+  .faq__title {
+    font-size: 2.375rem;
+  }
+
+  .faq__title {
+    margin-bottom: 3.125rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1343,6 +1445,22 @@ main {
   .review-form__file {
     font-size: 0.875rem;
   }
+
+  .faq {
+    padding-top: 3.125rem;
+  }
+
+  .faq {
+    padding-bottom: 3.125rem;
+  }
+
+  .faq__title {
+    font-size: 1.5rem;
+  }
+
+  .faq__title {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -1433,6 +1551,10 @@ main {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     min-width: 100%;
+  }
+
+  .faq__answer {
+    overflow: auto;
   }
 }
 
@@ -1764,6 +1886,54 @@ main {
 @supports not (font-size: clamp( 0.875rem , 0.8472222222rem  +  0.1388888889vw , 1rem )) {
     .review-form__file {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 90);
+    }
+}
+
+@supports (padding-top: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem )) {
+    .faq {
+      padding-top: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem )) {
+    .faq {
+      padding-top: calc(3.125rem + 1.875 * (100vw - 20rem) / 90);
+    }
+}
+
+@supports (padding-bottom: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem )) {
+    .faq {
+      padding-bottom: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 3.125rem , 2.7083333333rem  +  2.0833333333vw , 5rem )) {
+    .faq {
+      padding-bottom: calc(3.125rem + 1.875 * (100vw - 20rem) / 90);
+    }
+}
+
+@supports (font-size: clamp( 1.5rem , 1.3055555556rem  +  0.9722222222vw , 2.375rem )) {
+    .faq__title {
+      font-size: clamp( 1.5rem , 1.3055555556rem  +  0.9722222222vw , 2.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.3055555556rem  +  0.9722222222vw , 2.375rem )) {
+    .faq__title {
+      font-size: calc(1.5rem + 0.875 * (100vw - 20rem) / 90);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.875rem , 1.5972222222rem  +  1.3888888889vw , 3.125rem )) {
+    .faq__title {
+      margin-bottom: clamp( 1.875rem , 1.5972222222rem  +  1.3888888889vw , 3.125rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.875rem , 1.5972222222rem  +  1.3888888889vw , 3.125rem )) {
+    .faq__title {
+      margin-bottom: calc(1.875rem + 1.25 * (100vw - 20rem) / 90);
     }
 }
 }

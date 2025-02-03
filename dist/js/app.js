@@ -3208,6 +3208,31 @@
             rating.innerHTML = `<span>${"⭐".repeat(stars)}</span>`;
         }));
     }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const reviewList = document.querySelector(".review__list");
+        if (!reviewList) return;
+        let isTouchDevice = false;
+        window.addEventListener("touchstart", (() => isTouchDevice = true), {
+            once: true
+        });
+        reviewList.addEventListener("wheel", (function(event) {
+            if (isTouchDevice) return;
+            event.preventDefault();
+            this.scrollLeft += event.deltaY;
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const faqItems = document.querySelectorAll(".faq__item");
+        if (!faqItems.length) return;
+        faqItems.forEach((item => {
+            const question = item.querySelector(".faq__question");
+            question.addEventListener("click", (() => {
+                const isActive = item.classList.contains("active");
+                faqItems.forEach((el => el.classList.remove("active")));
+                if (!isActive) item.classList.add("active");
+            }));
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
