@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250203144817">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250207101559">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
 
 				<!-- Логотип -->
 				<div class="header__logo">
-					<a href="#" aria-label="На главную страницу">
+					<a href="home.html" aria-label="На главную страницу">
 						<picture><source srcset="img/icons/logo.webp" type="image/webp"><img src="img/icons/logo.webp" alt="Логотип компании"></picture>
 					</a>
 				</div>
@@ -45,21 +45,11 @@
 					<!-- Выпадающее меню -->
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 1</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 3</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 4</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 1</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 1</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 3</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 4</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 1</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 1</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Пункт 2</a></li>
+							<li class="menu__item"><a href="catalog.html" class="menu__link">All products</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Mini Tractors</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Mini Excavators</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Accessories</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Any of your options can be added</a></li>
 						</ul>
 					</nav>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
@@ -77,7 +67,7 @@
 							country!"
 						</div>
 						<a href="#" class="slider-overlay__btn">Get a consultation</a>
-						<a href="#" class="slider-overlay__arrow"> <picture><source srcset="img/icons/arrow2.webp" type="image/webp"><img src="img/icons/arrow2.png" alt=""></picture> </a>
+						<a href="#advantages" class="slider-overlay__arrow"> <picture><source srcset="img/icons/arrow2.webp" type="image/webp"><img src="img/icons/arrow2.png" alt=""></picture> </a>
 					</div>
 					<!-- Оболонка слайдера -->
 					<div class="fullscreen__slider swiper">
@@ -104,7 +94,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="advantages">
+			<section id="advantages" class="advantages">
 				<div class="advantages__container">
 					<h2 class="advantages__title">What do we offer?</h2>
 					<div class="advantages__body">
@@ -221,7 +211,7 @@
 						</div>
 						<!-- Правая колонка: карта -->
 						<div class="about-us__right" data-animate="fade-in">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.4897614102397!2d153.10983427632178!3d-27.20376910542935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b93e8b466937f8b%3A0x149f21c4b3051cf7!2zNjEgTWVpbiBTdCwgU2NhcmJvcm91Z2ggUUxEIDQwMjAsINCQ0LLRgdGC0YDQsNC70LjRjw!5e0!3m2!1sru!2sua!4v1738492347202!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe style="width: 100%; height: 450px; border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3548.4897614102397!2d153.10983427632178!3d-27.20376910542935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b93e8b466937f8b%3A0x149f21c4b3051cf7!2zNjEgTWVpbiBTdCwgU2NhcmJvcm91Z2ggUUxEIDQwMjAsINCQ0LLRgdGC0YDQsNC70LjRjw!5e0!3m2!1sru!2sua!4v1738492347202!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>
@@ -345,7 +335,7 @@
 							<input type="text" id="name" name="name" class="review-form__input" required>
 							<div class="review-form__select-container">
 								<label for="rating" class="review-form__label">Оценка:</label>
-								<select id="rating" name="rating" class="review-form__select" required>
+								<select id="rating" name="rating" class="review-form__select">
 									<option value="1">1 звезда</option>
 									<option value="2">2 звезды</option>
 									<option value="3">3 звезды</option>
@@ -435,55 +425,28 @@
 					</div>
 				</div>
 			</section>
-
-			<div class="test">
-				<div class="test__container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente incidunt repudiandae assumenda, numquam
-					vitae, sequi dolor consequuntur est veniam ut nam saepe nihil tempore autem aliquid, a eligendi tempora
-					repellendus fugiat voluptate quisquam deleniti mollitia eum. Explicabo molestiae provident voluptatum
-					magnam sint officiis eum numquam similique beatae aut, nisi a voluptate deleniti et? Reprehenderit error
-					sequi autem eveniet tempora enim perspiciatis fugit natus, perferendis at animi! Perspiciatis rerum
-					facilis minus alias possimus! Et non aut ullam veritatis laudantium voluptatibus provident totam quas.
-					Molestias fugit ratione quis eum nobis, expedita quaerat voluptates harum illo, nihil itaque consequatur
-					maiores facere placeat ducimus, a possimus? Autem fuga deleniti molestias nesciunt distinctio iure
-					possimus necessitatibus laudantium consequatur, quos expedita officiis, natus illo sapiente. Veritatis
-					tempora quod doloremque, quae possimus iusto natus iure reiciendis expedita suscipit ad at aliquid, saepe
-					neque nam vitae enim numquam fugiat eligendi quidem. Vel rem neque, praesentium qui repellendus
-					necessitatibus architecto illum, nam voluptas quae non quidem vitae eligendi fuga voluptatum similique
-					recusandae! Dolore veniam accusamus cum porro sint, eveniet placeat quibusdam corrupti eos sapiente quia
-					quasi quod vitae, unde obcaecati dignissimos aspernatur commodi magni ipsum facere dolorum, iure ducimus?
-					Architecto, facilis quas. Reprehenderit, nobis id minima suscipit commodi ipsum ab molestias, odio vel
-					vero doloribus quidem atque, temporibus esse aliquid. Dolorum asperiores et esse iure sint voluptate
-					deserunt autem modi, quod ipsa? Nam est, cum molestiae placeat magnam libero ipsa dignissimos repellendus
-					dolorum beatae mollitia ipsum quos eligendi officiis quibusdam aliquid, suscipit blanditiis autem, non
-					quis porro possimus laborum! Ipsam suscipit, quia, unde nam nobis modi et consequuntur illum deserunt
-					quae aliquid veniam vero maxime debitis consequatur eum sed? Accusamus quia itaque impedit voluptatem
-					perspiciatis deleniti pariatur eveniet! Nulla nam accusantium cum dolores ea reprehenderit reiciendis
-					blanditiis, facilis architecto velit rerum rem eveniet eum a. Ut eum minus magnam magni accusantium
-					nesciunt doloribus numquam nemo cumque. Reiciendis dolorum nisi sunt ratione nulla earum debitis,
-					reprehenderit obcaecati sapiente? Dignissimos, aliquid magnam blanditiis cum non iure et sit corporis
-					sed, hic a voluptas earum tempore reiciendis, impedit ullam eveniet excepturi facere saepe? Optio unde
-					quaerat atque dolorem enim, ex inventore consequuntur, corrupti quas doloremque velit veniam? Sapiente,
-					deleniti in placeat nostrum a quisquam nam, at ullam, quaerat omnis error? Pariatur ullam fugiat earum
-					illum mollitia quo numquam nisi veritatis fuga, quod quasi qui molestias quia officiis cumque quae?
-					Quibusdam omnis dolores rerum veritatis magnam, eos aliquid perspiciatis exercitationem nostrum error
-					laborum nisi? Dolor eligendi cumque ea consequuntur eaque autem accusamus alias, neque, earum quod
-					consequatur ut dolores numquam! Nam quisquam aliquid libero numquam enim minus impedit inventore
-					laboriosam adipisci? Possimus, itaque molestiae corrupti sint doloremque quam odit nesciunt voluptatum
-					qui repudiandae? Eveniet eos, accusantium, beatae vitae, in temporibus sit officia incidunt reiciendis
-					est quo. Enim magni voluptate saepe optio, sed recusandae eaque fuga ut iste molestiae, quisquam,
-					doloribus voluptatibus voluptatem. Exercitationem maiores inventore voluptatem ab aliquid necessitatibus
-					suscipit, in fugiat quia debitis provident itaque incidunt neque non deleniti consequatur pariatur
-					quibusdam odio temporibus, aspernatur ipsam sint. Minus ullam aut quia quibusdam.
-				</div>
-			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__logo">
+					<picture><source srcset="img/icons/logo.webp" type="image/webp"><img src="img/icons/logo.webp" alt="Compani logo"></picture>
+				</div>
+				<div class="footer__contacts">
+					<p class="footer__address">📍 61 Mein Street, Scarborough, Brisbane, QLD, Australia</p>
+					<p class="footer__phone">📞 <a href="tel:+61488732755">+61 4 8873 2755</a></p>
+					<p class="footer__email">✉ <a href="mailto:example@email.com">example@email.com</a></p>
+					<div class="footer__links">
+						<a href="https://wa.me/61XXXXXXXXX" class="footer__link">📲 WhatsApp</a> |
+						<a href="https://t.me/username" class="footer__link">🔵 Telegram</a>
+					</div>
+				</div>
+				<div class="footer__cta">
+					<a href="catalog.html" class="footer__button">Catalog</a>
+				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250203144817"></script>
+	<script src="js/app.min.js?_v=20250207101559"></script>
 
 
 </body>
